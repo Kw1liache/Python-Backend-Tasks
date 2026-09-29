@@ -9,3 +9,8 @@ def add_numbers(a: float, b: float) -> float:
         float: Сумма двух чисел.
     """
     return a + b
+
+def divide(a, b):
+    if b == 0:
+        return "Деление на ноль невозможно"
+    return a / b
