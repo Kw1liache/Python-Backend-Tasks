@@ -68,22 +68,11 @@ class Ebook(Book):
 
 
 if __name__ == "__main__":
-    book1 = Book.from_string("Мастер и Маргарита;М.А.Булгаков;1928")
-    book2 = Ebook.from_string("Война и мир;Л.Н.Толстой;1869;PDF")
-    book3 = Book("Война и мир", "Л.Н.Толстой", 1869)
+    book = Book.from_string("Мастер и Маргарита;М.А. Булгаков;1928")
+    ebook = Ebook.from_string("Война и мир;Л.Н. Толстой;1869;PDF")
 
-    print(book1)
-    print(book2)
-    print(book3)
-    print("===========================")
-    print("book1 == book2?", book1 == book2)
-    print("book1 == book3?", book1 == book3)
-    print("book2 == book3?", book2 == book3)
-    print("===========================")
-    print(f"Возраст книги «{book1.title}» в {date.today().year} году: {book1.age} лет")
-    print("===========================")
-    book3.age = 10
-    print(f"Новый год издания для «{book3.title}»: {book3.year}")
-    print("===========================")
-    book1.print_info()
-    book2.print_info()
+    print(book)
+    print(ebook)
+    print(f"Возраст книги «{book.title}»: {book.age} лет")
+    book.print_info()
+    ebook.print_info()
